@@ -120,17 +120,22 @@ body{
 .values-list strong {
   color: #002f5f;
 }
+/* ...existing code... */
+
 .about-container {
-  max-width: 1000px;
+  width: 90vw;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background: linear-gradient(to bottom right, #f4f9ff, #ffffff);
+  background: linear-gradient(135deg, #e0ffff 0%, #ffffff 100%);
   border-left: 6px solid #00509e;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* ...existing code... */
 
 .about-container:hover {
   transform: scale(1.015);
@@ -197,22 +202,55 @@ body{
   border-radius: 8px;
   transition: 0.3s ease;
 }
+/* ...existing code... */
 
-.services-nav a:hover {
-  background-color: #0077cc;
-  color: white;
+/* Make the services section wider and more professional */
+.services-section {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #f9f9f9;
+  padding: 48px 0 48px 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* Section Title */
-#general-services {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #005b99;
-  border-left: 5px solid #0077cc;
-  padding-left: 0.75rem;
+.services-section > h2,
+.services-section > nav,
+.services-section > h3 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
 }
 
-/* Services Grid Layout */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+}
+
+.service-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  min-width: 240px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+/* ...existing code... */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -319,4 +357,250 @@ body{
   background-repeat: no-repeat;
   color: white; /* adjust based on contrast */
 }
+/* ...existing code... */
 
+.services-section {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 3rem 0;
+  border-radius: 0;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  /* Gradient background: aqua to white */
+  background: linear-gradient(135deg, #7fffd4 0%, #ffffff 100%);
+  color: #003366;
+}
+/* Modern Doctor Profile Section */
+.doctor-profile {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #7fffd4 0%, #ffffff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 119, 204, 0.10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,119,204,0.08);
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.doctor-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7fffd4;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.10);
+}
+
+.doctor-details h2 {
+  margin: 0 0 0.5rem 0;
+  color: #0077cc;
+  font-size: 2rem;
+}
+
+.doctor-details h4 {
+  margin: 0 0 1rem 0;
+  color: #009688;
+  font-weight: 500;
+}
+
+.doctor-details p {
+  color: #333;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+.contact-us {
+  background-color: #e8f4fd;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box h4 {
+  margin-bottom: 8px;
+  color: #007acc;
+}
+
+.contact-box a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-box a:hover {
+  color: #007acc;
+}
+
+.whatsapp-link {
+  color: #25d366;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .contact-methods {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-box {
+    flex: 1;
+    max-width: 240px;
+  }
+}
+
+/* Modern Location & Hours Section */
+.location-hours {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #e0ffff 0%, #ffffff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 119, 204, 0.10);
+}
+
+.location-container h2 {
+  color: #0077cc;
+  margin-bottom: 1.5rem;
+}
+
+.location-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.location-info,
+.hours-info {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,119,204,0.07);
+  padding: 1.5rem 2rem;
+  min-width: 220px;
+  flex: 1 1 260px;
+}
+
+.location-info h4,
+.hours-info h4 {
+  margin: 0 0 0.3rem 0;
+  color: #0077cc;
+}
+
+.location-info p,
+.hours-info p {
+  margin: 0.2rem 0;
+  color: #333;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #009688;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.map-link:hover {
+  color: #0077cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .location-grid {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+/* Clean, Modern Footer */
+.site-footer {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #7fffd4 0%, #e0ffff 100%);
+  color: #003366;
+  padding: 2.5rem 0 1.5rem 0;
+  box-shadow: 0 -2px 16px rgba(0,119,204,0.07);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content h3 {
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer-content p {
+  margin: 0.2rem 0 1.2rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.footer-links {
+  margin: 1.2rem 0 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.footer-links a {
+  color: #009688;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
