@@ -3,357 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LANESRA CLINIC</title>
-    <link rel="stylesheet" href="Style.css">
+    <meta name="description" content="Lanesra Health & Wellness Center - Quality healthcare in Miritini, Mombasa. General consultation, laboratory tests, ultrasound, and more.">
+    <title>Lanesra Health & Wellness Center | Quality Health Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-container">
-        <div class="logo-container">
-            <img src="Assets\images\logo (1).png" alt="Lanesra Logo" class="logo">
-            <h1 class="site-title">Lanesra Health & Wellness Center</h1>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="Assets/images/logo (1).png" alt="Lanesra Logo">
+            <div class="preloader-spinner"></div>
         </div>
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#doctors">Doctors</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"><div class="scroll-progress-bar" id="progressBar"></div></div>
+
+    <!-- Header -->
+    <header class="site-header" id="mainHeader">
+        <div class="header-container">
+            <a href="#home" class="logo-link">
+                <div class="logo-container">
+                    <img src="Assets/images/logo (1).png" alt="Lanesra Logo" class="logo">
+                    <div class="logo-text">
+                        <span class="logo-title">Lanesra</span>
+                        <span class="logo-subtitle">Health & Wellness</span>
+                    </div>
+                </div>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#doctors" class="nav-item">Doctors</a>
+                <a href="#contact" class="nav-item">Contact</a>
+                <a href="#contact" class="btn btn-primary btn-sm" data-open-modal>Book Appointment</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-item">Home</a>
+            <a href="#about" class="mobile-nav-item">About</a>
+            <a href="#services" class="mobile-nav-item">Services</a>
+            <a href="#doctors" class="mobile-nav-item">Doctors</a>
+            <a href="#contact" class="mobile-nav-item">Contact</a>
+            <a href="#contact" class="btn btn-primary mobile-cta" data-open-modal>Book Appointment</a>
         </div>
     </header>
-   <section class="hero-section" id="home">
-  <div class="hero-image-container">
-    <img src="Assets\images\logo (1).jpg" alt="Clinic Welcome" class="hero-image" />
-    <img src="Assets\images\logo (1).png" alt="Clinic Logo" class="hero-logo">
-    <div class="hero-overlay">
-      <h2>Welcome to Lanesra Health & Wellness Center</h2>
-      <p>"Quality Health Care"!<br>We Care</p>
-      <a href="#contact" class="btn-primary">Book an Appointment</a>
-    </div>
-  </div>
-    </section>
-    <section class="about">
-  <div class="about-container">
-    <h2>About Lanesra Health & Wellness</h2>
-    <p>
-      Located in the heart of Miritini, Mombasa, Lanesra Clinic is dedicated to providing
-      compassionate and comprehensive care to every patient. Our mission is to improve lives
-      through affordable, accessible, and top-tier health services.
-    </p>
-<section id="about">
-  <div class="about-container">
-    <h2>About Us</h2>
 
-    <div class="about-block">
-      <h3>Our Mission</h3>
-      <p>We are committed to delivering efficient, affordable, and high-quality healthcare every day. Our goal is to ensure that every patient receives timely medical attention, compassionate care, and lasting wellness support — all at a value that respects their needs and circumstances.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <img src="Assets/images/logo (1).jpg" alt="Clinic interior" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="material-icons">verified</span>
+                    Trusted Healthcare in Mombasa
+                </div>
+                <h1 class="hero-title reveal delay-1">
+                    Your Health, <br><span class="text-accent">Our Priority</span>
+                </h1>
+                <p class="hero-subtitle reveal delay-2">
+                    Compassionate, affordable, and comprehensive medical care in the heart of Miritini. 
+                    Experience healthcare that truly puts patients first.
+                </p>
+                <div class="hero-actions reveal delay-3">
+                    <a href="#contact" class="btn btn-primary btn-lg" data-open-modal>
+                        <span class="material-icons">calendar_today</span>
+                        Book Appointment
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg">
+                        <span class="material-icons">medical_services</span>
+                        Our Services
+                    </a>
+                </div>
+            </div>
+            <a href="#stats" class="scroll-indicator">
+                <span class="mouse"><span class="wheel"></span></span>
+            </a>
+        </section>
+
+        <!-- Stats Strip -->
+        <section class="stats-section" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card reveal">
+                        <div class="stat-icon"><span class="material-icons">schedule</span></div>
+                        <div class="stat-number"><span class="counter" data-target="7">0</span> Days</div>
+                        <div class="stat-label">Open Per Week</div>
+                    </div>
+                    <div class="stat-card reveal delay-1">
+                        <div class="stat-icon"><span class="material-icons">groups</span></div>
+                        <div class="stat-number"><span class="counter" data-target="5000">0</span>+</div>
+                        <div class="stat-label">Patients Served</div>
+                    </div>
+                    <div class="stat-card reveal delay-2">
+                        <div class="stat-icon"><span class="material-icons">medication</span></div>
+                        <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
+                        <div class="stat-label">Medical Services</div>
+                    </div>
+                    <div class="stat-card reveal delay-3">
+                        <div class="stat-icon"><span class="material-icons">star</span></div>
+                        <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+                        <div class="stat-label">Patient Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <div class="image-frame">
+                            <img src="Assets/images/logo (1).png" alt="Lanesra Clinic">
+                            <div class="experience-float">
+                                <span class="years">10+</span>
+                                <span>Years of<br>Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content reveal delay-1">
+                        <span class="section-tag">About Us</span>
+                        <h2 class="section-title">Healing with Heart & <span class="text-accent">Expertise</span></h2>
+                        <p class="lead">
+                            Located in the heart of Miritini, Mombasa, Lanesra Clinic is dedicated to providing 
+                            compassionate and comprehensive care to every patient who walks through our doors.
+                        </p>
+                        <p>
+                            Our mission is to improve lives through affordable, accessible, and top-tier health services. 
+                            We believe that quality healthcare should never be out of reach.
+                        </p>
+                        
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <div class="value-icon"><span class="material-icons">favorite</span></div>
+                                <div>
+                                    <h4>Compassion</h4>
+                                    <p>Empathy in every interaction</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><span class="material-icons">verified_user</span></div>
+                                <div>
+                                    <h4>Integrity</h4>
+                                    <p>Doing the right thing always</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><span class="material-icons">psychology</span></div>
+                                <div>
+                                    <h4>Excellence</h4>
+                                    <p>Continuous improvement</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><span class="material-icons">accessibility_new</span></div>
+                                <div>
+                                    <h4>Patient-First</h4>
+                                    <p>Your needs guide our care</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">What We Offer</span>
+                    <h2 class="section-title">Comprehensive <span class="text-accent">Medical Services</span></h2>
+                    <p class="section-subtitle">From routine checkups to specialized diagnostics, we provide a full spectrum of healthcare services.</p>
+                </div>
+
+                <div class="services-tabs reveal delay-1">
+                    <button class="tab-btn active" data-tab="general-tab">
+                        <span class="material-icons">stethoscope</span> General Services
+                    </button>
+                    <button class="tab-btn" data-tab="lab-tab">
+                        <span class="material-icons">biotech</span> Laboratory
+                    </button>
+                    <button class="tab-btn" data-tab="scans-tab">
+                        <span class="material-icons">ultrasound</span> Scans & Others
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- General Services -->
+                    <div class="tab-panel active" id="general-tab">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">app_registration</span>
+                                    <span class="service-badge">Free</span>
+                                </div>
+                                <h4>Registration</h4>
+                                <p>Quick patient onboarding with minimal paperwork.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 5 mins</span>
+                                    <span><span class="material-icons">badge</span> ID Required</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">child_care</span>
+                                    <span class="service-badge free">Free</span>
+                                </div>
+                                <h4>Pediatrician Consultation</h4>
+                                <p>Specialized care for infants and children.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">receipt</span> Receipt + Card</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">local_hospital</span>
+                                    <span class="service-badge">KES 300</span>
+                                </div>
+                                <h4>General Consultation</h4>
+                                <p>Comprehensive checkups and treatment plans.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">receipt</span> Receipt + Card</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">restaurant</span>
+                                    <span class="service-badge">KES 500</span>
+                                </div>
+                                <h4>Nutritionist Consultation</h4>
+                                <p>Personalized dietary and wellness guidance.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">hearing</span>
+                                    <span class="service-badge">KES 500</span>
+                                </div>
+                                <h4>ENT Consultation</h4>
+                                <p>Ear, nose, and throat specialist care.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                    <span><span class="material-icons">event</span> Booking required</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">pregnant_woman</span>
+                                    <span class="service-badge">KES 500</span>
+                                </div>
+                                <h4>Antenatal Care</h4>
+                                <p>Complete maternity and prenatal services.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                    <span><span class="material-icons">book</span> Mother's booklet</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">baby_changing_station</span>
+                                    <span class="service-badge">KES 1,000</span>
+                                </div>
+                                <h4>Postnatal Care</h4>
+                                <p>Recovery and newborn care support.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                    <span><span class="material-icons">medical_services</span> Doctor's referral</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lab Tests -->
+                    <div class="tab-panel" id="lab-tab">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">science</span>
+                                    <span class="service-badge">KES 500</span>
+                                </div>
+                                <h4>FHG Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">water_drop</span>
+                                    <span class="service-badge">KES 100</span>
+                                </div>
+                                <h4>Blood Sugar Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">science</span>
+                                    <span class="service-badge">KES 200</span>
+                                </div>
+                                <h4>Urinalysis</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">pregnant_woman</span>
+                                    <span class="service-badge">KES 200</span>
+                                </div>
+                                <h4>Pregnancy Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">health_and_safety</span>
+                                    <span class="service-badge">KES 2,000</span>
+                                </div>
+                                <h4>ANC Profile</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                    <span><span class="material-icons">gavel</span> Authorization may apply</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">vaccines</span>
+                                    <span class="service-badge">KES 250</span>
+                                </div>
+                                <h4>HIV Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                    <span><span class="material-icons">privacy_tip</span> Confidential</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">science</span>
+                                    <span class="service-badge">KES 400</span>
+                                </div>
+                                <h4>VDRL Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 30 mins</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">bug_report</span>
+                                    <span class="service-badge">Doctor's request</span>
+                                </div>
+                                <h4>Dengue Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">receipt_long</span> Doctor's request form</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">coronavirus</span>
+                                    <span class="service-badge">KES 200</span>
+                                </div>
+                                <h4>Malaria Test</h4>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 15 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scans & Others -->
+                    <div class="tab-panel" id="scans-tab">
+                        <div class="services-grid">
+                            <div class="service-card highlight">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">monitor_heart</span>
+                                    <span class="service-badge">KES 1,000</span>
+                                </div>
+                                <h4>Obstetric Ultrasound</h4>
+                                <p>Prenatal imaging with detailed reporting.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 1 hour</span>
+                                    <span><span class="material-icons">water</span> Full bladder required</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card highlight">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">monitor_heart</span>
+                                    <span class="service-badge">KES 1,200</span>
+                                </div>
+                                <h4>Abdominal Ultrasound</h4>
+                                <p>Diagnostic imaging for abdominal organs.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 1 hour</span>
+                                    <span><span class="material-icons">no_food</span> Fast 6–8 hours</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">vaccines</span>
+                                    <span class="service-badge">Varies</span>
+                                </div>
+                                <h4>Immunization</h4>
+                                <p>Vaccinations for all ages.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 10–15 mins</span>
+                                    <span><span class="material-icons">badge</span> Immunization card</span>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-header">
+                                    <span class="service-icon material-icons">healing</span>
+                                    <span class="service-badge">Varies</span>
+                                </div>
+                                <h4>Minor Procedures</h4>
+                                <p>Outpatient surgical procedures.</p>
+                                <div class="service-meta">
+                                    <span><span class="material-icons">schedule</span> 1 hour</span>
+                                    <span><span class="material-icons">medical_services</span> Consultation first</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="doctors-section" id="doctors">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Our Team</span>
+                    <h2 class="section-title">Meet Your <span class="text-accent">Physician</span></h2>
+                    <p class="section-subtitle">Experienced, compassionate, and dedicated to your wellbeing.</p>
+                </div>
+
+                <div class="doctor-card reveal delay-1">
+                    <div class="doctor-image">
+                        <img src="Assets/images/OIP.webp" alt="Dr. Jasper Rayori">
+                        <div class="doctor-social">
+                            <a href="#" aria-label="LinkedIn"><span class="material-icons">link</span></a>
+                            <a href="#" aria-label="Email"><span class="material-icons">email</span></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <span class="doctor-role">Chief Medical Officer</span>
+                        <h3>Dr. Jasper Rayori</h3>
+                        <p class="doctor-degree">Bachelors in Clinical Medicine and Surgery</p>
+                        <p class="doctor-bio">
+                            Dr. Rayori is a passionate and experienced clinician dedicated to providing holistic care 
+                            with a patient-first approach. He specializes in preventive medicine, outpatient procedures, 
+                            and chronic disease management. With years of experience in both urban and rural settings, 
+                            he brings deep insight into community-based healthcare.
+                        </p>
+                        <div class="doctor-stats">
+                            <div><strong>10+</strong> Years Exp.</div>
+                            <div><strong>5k+</strong> Patients</div>
+                            <div><strong>BM</strong> Certified</div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary" data-open-modal>
+                            <span class="material-icons">calendar_today</span> Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class="section-title">What Our <span class="text-accent">Patients Say</span></h2>
+                </div>
+                <div class="testimonials-slider reveal delay-1">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-stars">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>
+                        </div>
+                        <p class="testimonial-text">"The staff at Lanesra are incredibly professional and caring. From registration to consultation, everything was smooth and efficient. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div>
+                                <strong>Mary K.</strong>
+                                <span>Antenatal Patient</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-stars">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>
+                        </div>
+                        <p class="testimonial-text">"I brought my child for pediatric consultation and Dr. Rayori was amazing with her. The clinic is clean, modern, and the prices are very fair."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JO</div>
+                            <div>
+                                <strong>James O.</strong>
+                                <span>Parent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-stars">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>
+                        </div>
+                        <p class="testimonial-text">"Best lab services in Miritini. I got my blood work done in under 30 minutes and the results were explained thoroughly. Thank you Lanesra!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SN</div>
+                            <div>
+                                <strong>Sarah N.</strong>
+                                <span>Lab Patient</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-dots">
+                        <button class="dot active" data-index="0"></button>
+                        <button class="dot" data-index="1"></button>
+                        <button class="dot" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">Book an <span class="text-accent">Appointment</span></h2>
+                        <p class="lead">Reach out to us for bookings, inquiries, or emergency assistance. We're here to help.</p>
+                        
+                        <div class="contact-cards">
+                            <div class="info-card">
+                                <div class="info-icon"><span class="material-icons">phone</span></div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+254703209690">+254 703 209 690</a>
+                                    <a href="tel:+254733959025">+254 733 959 025</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><span class="material-icons">email</span></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:lanesramedical@gmail.com">lanesramedical@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><span class="material-icons">chat</span></div>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/254703209690?text=Hello%20Lanesra%20Clinic%2C%20I%27d%20like%20to%20make%20an%20inquiry." target="_blank">Chat with us</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon"><span class="material-icons">location_on</span></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Miritini Estate, Mombasa, Kenya</p>
+                                    <a href="https://maps.app.goo.gl/B7u2QTxZjEkA7PAz7?g_st=aw" target="_blank">Open in Google Maps</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="opening-hours">
+                            <h4><span class="material-icons">schedule</span> Opening Hours</h4>
+                            <div class="hours-row">
+                                <span>Monday – Sunday</span>
+                                <strong>7:00 AM – 10:30 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper reveal delay-1">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" placeholder="John" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lname" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Required</label>
+                                <select id="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="general">General Consultation</option>
+                                    <option value="pediatric">Pediatrician</option>
+                                    <option value="ent">ENT Consultation</option>
+                                    <option value="antenatal">Antenatal Care</option>
+                                    <option value="lab">Laboratory Test</option>
+                                    <option value="ultrasound">Ultrasound</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message (Optional)</label>
+                                <textarea id="message" rows="4" placeholder="Tell us about your symptoms or preferred appointment time..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="material-icons">send</span> Request Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="Assets/images/logo (1).png" alt="Lanesra Logo">
+                        <div>
+                            <strong>Lanesra</strong>
+                            <span>Health & Wellness</span>
+                        </div>
+                    </div>
+                    <p>Quality healthcare accessible to everyone in Miritini and beyond. Your health is our mission.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#doctors">Doctors</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#services">General Consultation</a>
+                    <a href="#services">Laboratory Tests</a>
+                    <a href="#services">Ultrasound</a>
+                    <a href="#services">Antenatal Care</a>
+                    <a href="#services">Immunization</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><span class="material-icons">phone</span> +254 703 209 690</p>
+                    <p><span class="material-icons">email</span> lanesramedical@gmail.com</p>
+                    <p><span class="material-icons">location_on</span> Miritini, Mombasa</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/254703209690" target="_blank" aria-label="WhatsApp"><span class="material-icons">chat</span></a>
+                        <a href="https://maps.app.goo.gl/B7u2QTxZjEkA7PAz7?g_st=aw" target="_blank" aria-label="Google Maps"><span class="material-icons">location_on</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Lanesra Health & Wellness Clinic. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <!-- Appointment Modal -->
+    <div class="modal" id="appointmentModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h3>Book an Appointment</h3>
+                <p>Fill in your details and we'll confirm your booking shortly.</p>
+            </div>
+            <form id="appointmentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="+254 7XX XXX XXX" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Service</label>
+                    <select required>
+                        <option value="">Select service...</option>
+                        <option>General Consultation</option>
+                        <option>Pediatrician</option>
+                        <option>ENT</option>
+                        <option>Antenatal / Postnatal</option>
+                        <option>Lab Test</option>
+                        <option>Ultrasound</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <input type="time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Confirm Booking</button>
+            </form>
+        </div>
     </div>
 
-    <div class="about-block">
-      <h3>Our Vision</h3>
-      <p>To become the healthcare provider of choice in our community by consistently offering exceptional medical services, building trusted relationships, and promoting a culture of healing, innovation, and inclusivity.</p>
-    </div>
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
-    <div class="about-block">
-      <h3>Our Core Values</h3>
-      <ul class="values-list">
-        <li><strong>Integrity</strong> – <em>We do the right thing, even when no one is watching.</em></li>
-        <li><strong>Patient-Centered Care</strong> – <em>We prioritize the needs, dignity, and voices of our patients and their families.</em></li>
-        <li><strong>Respect</strong> – <em>We value every person and treat all with kindness and fairness.</em></li>
-        <li><strong>Accountability</strong> – <em>We take responsibility for our actions and strive for continuous improvement.</em></li>
-        <li><strong>Compassion</strong> – <em>We approach every individual with empathy, kindness, and genuine care.</em></li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section class="services-section" id="services">
-  <h2>Our Services</h2>
-
-  <!-- Navigation Anchors -->
-  <nav class="services-nav">
-    <ul>
-      <li><a href="#general-services">General Services</a></li>
-      <li><a href="#lab-tests">Lab Tests</a></li>
-      <li><a href="#other-services">Other Services</a></li>
-    </ul>
-  </nav>
-
-  <!-- GENERAL SERVICES -->
-  <h3 id="general-services">General Services</h3>
-  <div class="services-grid">
-
-    <!-- Registration -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">📝</span> Registration</h4>
-      <p class="service-info"><span>Price:</span> Free</p>
-      <p class="service-info"><span>Requirements:</span> Client ID, personal details</p>
-      <p class="service-info"><span>Time:</span> 5 mins</p>
-    </div>
-
-    <!-- Pediatrician Consultation -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">👶</span> Pediatrician Consultation</h4>
-      <p class="service-info"><span>Price:</span> Free</p>
-      <p class="service-info"><span>Requirements:</span> Payment receipt, client attendance card</p>
-    </div>
-
-    <!-- General Consultation -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">🩺</span> General Consultation</h4>
-      <p class="service-info"><span>Price:</span> KES 300</p>
-      <p class="service-info"><span>Requirements:</span> Payment receipt, client attendance card</p>
-    </div>
-
-    <!-- Nutritionist Consultation -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">🥗</span> Nutritionist Consultation</h4>
-      <p class="service-info"><span>Price:</span> KES 500</p>
-      <p class="service-info"><span>Requirements:</span> Payment receipt, client attendance card</p>
-      <p class="service-info"><span>Time:</span> 30 mins</p>
-    </div>
-
-    <!-- ENT Consultation -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">👂</span> ENT Consultation</h4>
-      <p class="service-info"><span>Price:</span> KES 500</p>
-      <p class="service-info"><span>Requirements:</span> Prior booking at reception</p>
-      <p class="service-info"><span>Time:</span> 30 mins</p>
-    </div>
-
-    <!-- Antenatal Clinic -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">🤰</span> Antenatal Care Clinic</h4>
-      <p class="service-info"><span>Price:</span> KES 500</p>
-      <p class="service-info"><span>Requirements:</span> Mother's child booklet</p>
-      <p class="service-info"><span>Time:</span> 30 mins</p>
-    </div>
-
-    <!-- Postnatal Clinic -->
-    <div class="service-card">
-      <h4 class="service-title"><span class="service-icon">👩‍🍼</span> Postnatal Care Clinic</h4>
-      <p class="service-info"><span>Price:</span> KES 1000</p>
-      <p class="service-info"><span>Requirements:</span> Attendance card, doctor's recommendation, deposit</p>
-      <p class="service-info"><span>Time:</span> 30 mins</p>
-    </div>
-  </div>
-  <section id="lab-tests" class="services-section">
-  <h2>Laboratory Tests</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> FHG
-      </div>
-      <div class="service-info"><span>Price:</span> KES 500</div>
-      <div class="service-info"><span>Client Requirements:</span> Prior booking at reception</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> Blood Sugar
-      </div>
-      <div class="service-info"><span>Price:</span> KES 100</div>
-      <div class="service-info"><span>Client Requirements:</span> Prior booking at reception</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> Urinalysis
-      </div>
-      <div class="service-info"><span>Price:</span> KES 200</div>
-      <div class="service-info"><span>Client Requirements:</span> Prior booking at reception</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> Pregnancy Test
-      </div>
-      <div class="service-info"><span>Price:</span> KES 200</div>
-      <div class="service-info"><span>Client Requirements:</span> Prior booking at reception</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> ANC Profile
-      </div>
-      <div class="service-info"><span>Price:</span> KES 2000</div>
-      <div class="service-info"><span>Client Requirements:</span> Approved reauthorization in some cases</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> HIV Test
-      </div>
-      <div class="service-info"><span>Price:</span> KES 250</div>
-      <div class="service-info"><span>Client Requirements:</span> None</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> VDRL Test
-      </div>
-      <div class="service-info"><span>Price:</span> KES 400</div>
-      <div class="service-info"><span>Client Requirements:</span> None</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> Dengue Test
-      </div>
-      <div class="service-info"><span>Price:</span> Upon doctor's request</div>
-      <div class="service-info"><span>Client Requirements:</span> Payment request + Doctor's request form</div>
-      <div class="service-info"><span>Waiting Time:</span> 30 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">science</span> Malaria Test
-      </div>
-      <div class="service-info"><span>Price:</span> KES 200</div>
-      <div class="service-info"><span>Client Requirements:</span> Prior booking at reception</div>
-      <div class="service-info"><span>Waiting Time:</span> 15 mins</div>
-    </div>
-  </div>
-</section>
-<section id="scans-others" class="services-section">
-  <h2>Scans & Other Services</h2>
-  <div class="services-grid">
-    <!-- Scans -->
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">monitor_heart</span> Obstetric Ultrasound
-      </div>
-      <div class="service-info"><span>Price:</span> KES 1,000</div>
-      <div class="service-info"><span>Client Requirements:</span> Full bladder, 1-hour prior water intake</div>
-      <div class="service-info"><span>Waiting Time:</span> 1 hour</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">monitor_heart</span> Abdominal Ultrasound
-      </div>
-      <div class="service-info"><span>Price:</span> KES 1,200</div>
-      <div class="service-info"><span>Client Requirements:</span> Fasting for 6–8 hours</div>
-      <div class="service-info"><span>Waiting Time:</span> 1 hour</div>
-    </div>
-    <!-- Other Services -->
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">vaccines</span> Immunization
-      </div>
-      <div class="service-info"><span>Price:</span> Depends on vaccine</div>
-      <div class="service-info"><span>Client Requirements:</span> Immunization card (if available)</div>
-      <div class="service-info"><span>Waiting Time:</span> 10–15 mins</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-title">
-        <span class="material-icons service-icon">healing</span> Minor Procedures
-      </div>
-      <div class="service-info"><span>Price:</span> Based on procedure</div>
-      <div class="service-info"><span>Client Requirements:</span> Doctor's consultation prior</div>
-      <div class="service-info"><span>Waiting Time:</span> 1 hour</div>
-    </div>
-  </div>
-</section>
-<section class="doctor-profile" id="Doctors">
-  <div class="profile-card">
-    <div class="doctor-image">
-      <img src="Assets/images/OIP.webp" alt="Dr. Jasper Rayori">
-    </div>
-    <div class="doctor-details">
-      <h2>Dr. Jasper Rayori</h2>
-      <h4>Bachelors in Clinical Medicine and Surgery</h4>
-      <p>
-        Dr. Jasper Rayori is a passionate and experienced clinician dedicated to providing
-        holistic care with a patient-first approach. He specializes in preventive medicine,
-        outpatient procedures, and chronic disease management.
-      </p>
-      <p>
-        With years of experience in both urban and rural settings, Dr. Rayori brings deep
-        insight into community-based healthcare and personalized treatment strategies.
-      </p>
-    </div>
-  </div>
-</section>
-<section class="contact-us" id="contact">
-  <div class="contact-container">
-    <h2>Contact Us</h2>
-    <p>Reach out to us for bookings, inquiries, or more information.</p>
-
-    <div class="contact-methods">
-      <div class="contact-box">
-        <h4>Call Us</h4>
-        <p><a href="tel:+254703209690">+254 703 209 690</a></p>
-        <p><a href="tel:+254733959025">+254 733 959 025</a></p>
-      </div>
-
-      <div class="contact-box">
-        <h4>Email</h4>
-        <br>
-        <p><a href="mailto:lanesramedical@gmail.com">lanesramedical@gmail.com</a></p>
-      </div>
-
-      <div class="contact-box">
-        <h4>WhatsApp</h4>
-        <p>
-          <a href="https://wa.me/254703209690?text=Hello%20Lanesra%20Clinic%2C%20I%27d%20like%20to%20make%20an%20inquiry." 
-             target="_blank" class="whatsapp-link">
-            💬 Chat with us
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="location-hours" id="location">
-  <div class="location-container">
-    <h2>Location & Hours</h2>
-    <p>We’re open daily to serve you better.</p>
-
-    <div class="location-grid">
-      <div class="location-info">
-        <h4>Visit Us</h4>
-        <p>
-          Lanesra Health & Wellness Clinic<br>
-          Miritini Estate, Mombasa, Kenya
-        </p>
-        <a href="https://maps.app.goo.gl/B7u2QTxZjEkA7PAz7?g_st=aw" target="_blank" class="map-link">
-          📍 Open in Google Maps
-        </a>
-      </div>
-
-      <div class="hours-info">
-        <h4>Opening Hours</h4>
-        <p>Monday – Sunday</p>
-        <p><strong>7:00 AM – 10:30 PM</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class="site-footer">
-  <div class="footer-content">
-    <h3>Lanesra Health & Wellness Clinic</h3>
-    <p>Miritini Estate, Mombasa | Open Daily: 7:00 AM – 10:30 PM</p>
-    
-    <div class="footer-links">
-      <a href="#contact">Contact</a>
-      <a href="https://wa.me/254703209690" target="_blank">WhatsApp</a>
-      <a href="https://maps.app.goo.gl/B7u2QTxZjEkA7PAz7?g_st=aw" target="_blank">Google Maps</a>
-    </div>
-
-    <p class="copyright">
-      &copy; 2025 Lanesra Health & Wellness Clinic. All Rights Reserved.
-    </p>
-  </div>
-</footer>
+    <script src="main.js"></script>
 </body>
 </html>
